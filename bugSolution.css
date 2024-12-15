@@ -1,0 +1,27 @@
+/* Corrected CSS using calc() */
+#container {
+  width: calc(100% - 50px);
+}
+
+#element {
+  height: calc(50% + 2em);
+}
+
+/*Nested Calc (Should be avoided if possible, but here's a correctly formatted example) */
+#nested {
+  width: calc(calc(100% - 20px) / 2);
+}
+
+/* Correct spacing around operators */
+#spacing {
+  margin: calc(10px + 5px);
+}
+
+/*Always specify the units */
+#units {
+  padding: calc(20%/ 2);
+/*Incorrect*/
+  padding: calc(20% / 2px);/*Incorrect*/
+  padding: calc(20%/ 2px);/*Incorrect*/
+  padding: calc(20% / 2);/*Correct but might not be the desired behaviour*/
+}
